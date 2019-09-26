@@ -11,3 +11,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+if [ -f ~/.bash_aliases ]; then
+	source  ~/.bash_aliases
+fi
+
+eval $(thefuck --alias)
+
+autoload bashcompinit
+bashcompinit
+#eval "$(_CASPER_COMPLETE=source ~/cloud-deploy-cli/bin/casper)"
